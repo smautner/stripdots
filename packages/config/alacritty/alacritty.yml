@@ -1,0 +1,53 @@
+import:
+  #- ~/.config/alacritty/colors/onedark.yml
+  - ~/.config/alacritty/colors/xterm.yml
+
+
+
+# Font configuration (changes require restart)
+font:
+  # The normal (roman) font face to use.
+  normal:
+    family: JetBrainsMono Nerd Font
+    # Style can be specified to pick a specific face.
+    #style: Regular
+    style: Bold
+
+  # The bold font face
+  bold:
+    family: JetBrainsMono Nerd Font
+    # Style can be specified to pick a specific face.
+    style: Extra Bold
+
+  # The italic font face
+  italic:
+    family: JetBrainsMono Nerd Font
+    # Style can be specified to pick a specific face.
+    style: Bold Italic
+
+  size: 12.5
+  # i am disabling dpi scaling in the i3 conf, when i start alacritty
+  offset:
+    y: -2
+    x: -1
+
+
+colors:
+  use_thin_strokes: false
+
+# If `true`, bold text is drawn using the bright color variants.
+# draw_bold_text_with_bright_colors: false
+
+# Live config reload (changes require restart)
+#live_config_reload: true
+
+# Send ESC (\x1b) before characters when alt is pressed.
+alt_send_esc: true
+
+mouse:
+  hide_when_typing: true
+
+
+key_bindings:
+- { key: N,   mods: Control|Shift, action: SpawnNewInstance }
+
