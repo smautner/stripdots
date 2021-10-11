@@ -78,7 +78,23 @@ function getnvim(){
     echo "install a c compiler for treesitter"
 }
 
+function twofa(){
+    # packet: oath-toolkit
+    set oauth $(oathtool  --totp -d6 -b key4_2FactorAuth)
+    set pass 'passwd for sshkey'
 
+    expect -c "
+        set timeout 5
+        spawn ssh ASDASD -J ASDASD
+        expect \"Enter passphrase for key '~/.ssh/SSHKEY': \"
+        send \"$pass\r\"
+        expect \"One-time password (OATH) for \`USERNAME': \"
+        send \"$oauth\r\"
+        interact
+    "
+end
+
+}
 
 # tmux needs this in case of fish
 #export SHELL=$(which fish)
