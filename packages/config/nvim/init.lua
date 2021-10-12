@@ -27,6 +27,7 @@ require('packer').startup(function()
   use 'neovim/nvim-lspconfig'        -- Collection of configurations for built-in LSP client
   use 'hrsh7th/nvim-cmp'           -- Autocompletion plugin
   use 'hrsh7th/cmp-nvim-lsp'           -- Autocompletion plugin
+  use 'hrsh7th/cmp-buffer'
   use 'ray-x/lsp_signature.nvim'
   use 'wellle/targets.vim'
   use {
