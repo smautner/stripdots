@@ -69,14 +69,16 @@ require'cmp'.setup {
     { name = 'nvim_lsp' }
   }
 }
-require'lspconfig'.jedi_language_server.setup{
-    on_attach = on_attach,
-    flags = { debounce_text_changes = 150, },
+
+
+-- require'lspconfig'.jedi_language_server.setup{
+--     on_attach = on_attach,
+--     flags = { debounce_text_changes = 150, },
+--     capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+--   }
+require'lspconfig'.pylsp.setup{
     capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-  }
-
-
-
+}
 
 
 

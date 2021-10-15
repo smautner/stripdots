@@ -75,7 +75,7 @@ function getnvim(){
 	mkdir $HOME/.bin
     wget https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage -O $HOME/.bin/nvim
     chmod +x $HOME/.bin/nvim
-    pip install jedi-language-server neovim
+    pip install jedi-language-server neovim pylsp-mypy python-lsp-server
     echo "install a c compiler for treesitter"
 }
 
