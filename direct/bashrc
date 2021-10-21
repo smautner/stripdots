@@ -64,7 +64,7 @@ function getconda(){
     conda config --add channels conda-forge
 
     # we can also install some programs
-	for i in tmux git;
+	for i in tmux git vim;
          do which $i || conda install $i ; done
 
     pip install ranger-fm
